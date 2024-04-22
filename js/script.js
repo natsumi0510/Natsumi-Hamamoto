@@ -8,24 +8,24 @@ $(function(){
 });
 });
 
-// $(function(){
-//     $(window).scroll(function (){
-//         $('.fade').each(function(){
-//             var position = $(this).offset().top;
-//             var scroll = $(window).scrollTop();
-//             var windowHeight = $(window).height();
-//             if (scroll > position - windowHeight + 200){
-//                 $(function(){
-//                     $('.fade').each(function(i){
-//                       $(this).delay(i * 200).queue(function(){
-//                             $(this).addClass('active');
-//                         });
-//                     });
-//                 });
-//             }
-//         });
-//     });
-// });	
+$(function(){
+    $(window).scroll(function (){
+        $('.fade').each(function(){
+            var position = $(this).offset().top;
+            var scroll = $(window).scrollTop();
+            var windowHeight = $(window).height();
+            if (scroll > position - windowHeight + 250){
+                $(function(){
+                    $('.fade').each(function(i){
+                      $(this).delay(i * 300).queue(function(){
+                            $(this).addClass('active');
+                        });
+                    });
+                });
+            }
+        });
+    });
+});	
 
 // ハンバーガー
 $('.h-btn').click(function(){
